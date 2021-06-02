@@ -70,6 +70,7 @@ function reset() {
     document.getElementById("drink_name").value = "";
     document.getElementById("define").value = '';
     document.getElementById("cost").value = '';
+    document.getElementById('img').value = '';
 }
 function set_item(key, data) {
     data.sort();
@@ -122,7 +123,8 @@ function admin(check) {
         }
         if((window.localStorage.getItem('thong_bao') !== null)){
             mes = JSON.parse(window.localStorage.getItem("thong_bao"))
-            confirm(`Bạn có ${mes.length} thông báo`)
+            if (mes.length>0){
+            confirm(`Bạn có ${mes.length} thông báo`)}
             for (let i=0;i<mes.length;i++){
                 confirm(`Tên :${mes[i].name}
                 \nEmail: ${mes[i].email}
@@ -192,7 +194,7 @@ function update(id) {
 function cancel(id) {
     document.getElementById(`tr_${id}`).innerHTML = '';
     document.getElementById(`tr_${id}`).innerHTML += `<tr id="tr_${id}">
-        <td><img src='${drinks[i].imagePath}' width="120px" height="120px"></td>
+        <td><img src='${drinks[id].imagePath}' width="120px" height="120px"></td>
         <td>${drinks[id].Name}</td>
         <td>${drinks[id].define}</td>
         <td>${drinks[id].cost}VND</td>
