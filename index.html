@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <input class="menu-drop" id="check_box" type="checkbox">
+
+        <div class="menu-icon">
+            <div class="menu-line">
+            </div>
+        </div>
+        <div class="menu-item">
+            <li><a href="#header">Trang chủ</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#cf">Tin tức</a></li>
+            <li><a href="#sign_in">Đăng nhập</a></li>
+        </div>
+        <div class="header-text">
+            <h1>Nhà 87 Coffee</h1>
+            <a href="#contact">Đặt bàn</a>
+        </div>
+    </header>
+    <div class='account'>
+        <div id="sign_in">
+            <table style="border: none;">
+                <tbody>
+                    <tr>
+                        <td><label>User Name</label></td>
+                        <td><input type="text" placeholder="User Name" id="user"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password</label></td>
+                        <td><input type='password' placeholder="*******" id="pw"></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-warning" onclick="check_user()">Đăng nhập</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div id="signing" class='d-none'>
+            <h3 style="color:#FBBC01">Admin</h3>
+            <button class="btn btn-warning" onclick="sign_out()">Đăng xuất</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-none" id="add">
+            <h3 class="title">Add New Drink</h3>
+            <div class="row">
+                <div class="form-group">
+                    <label>Drink Name</label>
+                    <input id="drink_name" type="text" placeholder="Enter Product Name">
+                </div>
+                <div class="form-group">
+                    <label>Mô tả</label>
+                    <input id="define" type="text" placeholder="Enter mô tả">
+                </div>
+                <div class="form-group">
+                    <label>Cost</label>
+                    <input id="cost" type="number" placeholder="Enter cost">
+                </div>
+                <div class="form-group">
+                    <label>Image Path</label>
+                    <input id="img" type="text" placeholder="Enter src">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" type="button" onclick="addProduct()">Add</button>
+                    <button class="btn btn-danger" type="button" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <h3 id="menu" class="title">Hôm nay có</h3>
+        </div>
+        <div class="table">
+            <table id="product" class="product">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Món</th>
+                        <th>Mô tả</th>
+                        <th>cost</th>
+                        <th id="drink" class='d-none'>Món</th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+                </tbody>
+            </table>
+        </div>
+        <h3 id="cf" class="title">Nhà 87 coffee</h3>
+        <table id="about_we">
+            <tr>
+            <td>
+                <img src="css/img/avatar.png">
+            </td>
+            <th> 
+                <h2 style="color: #FBBC01;"> Tiệm cà phê 87</h2>
+                <br>
+                <ul>
+                <li>Open:6 AM</li>
+                <li>Close:10 PM</li>
+                <li>Do tình hình dịch bệnh nhà xin phép giảm 20% cho các hóa đơn mang về và chỉ phục vụ 60 phút cho mỗi khách.Xin lỗi vì sự bất tiện này :(</li>
+                </ul>
+            </th>
+            </tr>
+        </table>
+        
+        <div class="container" id="contact">
+            <h3 class="title">Đặt bàn</h3>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input id="name_" type="text" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input id="email_" type="text" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label>SĐT</label>
+                        <input id="phone_" type="number" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <input id="message_" type="text" placeholder="Enter message">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-warning" type="button" onclick="get_()">Send</button>
+                    </div>
+                </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
