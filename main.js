@@ -9,10 +9,10 @@ var Drinks = function (name, define, cost, imgagePath) {
     this.imagePath = imgagePath
 }
 var drinks = [], drink_ = [];
-let Ice_blend = new Drinks('Ice Blend', 'Thức uống đá xay', 45.000, './css/img/ice-blended.jpg');
-let Espresso = new Drinks('Espresso', 'Cà phê pha máy', 18.000, './css/img/espresso.jpg');
-let Smoothies = new Drinks('Smoothies', 'Đá xay sữa chua', 40.000, './css/img/smoothie.jpg');
-let Tea = new Drinks('Tea', 'Trà', 30.000, './css/img/tea.jpg');
+let Ice_blend = new Drinks('Ice Blend', 'Thức uống đá xay', 45000, './css/img/ice-blended.jpg');
+let Espresso = new Drinks('Espresso', 'Cà phê pha máy', 18000, './css/img/espresso.jpg');
+let Smoothies = new Drinks('Smoothies', 'Đá xay sữa chua', 40000, './css/img/smoothie.jpg');
+let Tea = new Drinks('Tea', 'Trà', 30000, './css/img/tea.jpg');
 drink_.push(Ice_blend);
 drink_.push(Espresso);
 drink_.push(Smoothies);
